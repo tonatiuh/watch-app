@@ -48,7 +48,7 @@ class Watch extends Component {
       const rotationDegrees = 6 * (i + 1);
       return (
         <span
-          className='diallines'
+          className='dial-line'
           style={{ color: 'red', transform: `rotate(${rotationDegrees}deg)` }}
           key={`dialLine-${i}`}
 
@@ -82,9 +82,7 @@ class Watch extends Component {
         <span className='six'>6</span>
         <span className='nine'>9</span>
 
-        <span className='diallines-container'>
-          {this.renderDialLines()}
-        </span>
+        {this.renderDialLines()}
 
         <div className="date">{day} {monthNames[month]}</div>
       </div>

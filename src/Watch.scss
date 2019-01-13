@@ -107,7 +107,7 @@
    left: 39px;
 }
 
-.diallines {
+.dial-line {
    position: absolute;
    top: 15px;
    left: 50%;
@@ -119,7 +119,7 @@
    transform-origin: 50% 160px;
 }
 
-.diallines:nth-of-type(5n) {
+.dial-line:nth-of-type(5n) {
    position: absolute;
    top: 10px;
    left: 50%;
