@@ -1,4 +1,4 @@
-![Watch app in action](watch_app.png "Watch app in action")
+![Watch app in action](watch_app.gif "Watch app in action")
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) & [Electron Builder](https://github.com/electron-userland/electron-builder)
 
