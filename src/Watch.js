@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import './Watch.scss';
 
+const monthNames = ["Jan", "Feb", "March", "April", "May", "June",
+  "July", "Aug", "Sept", "Oct", "Nov", "Dec"
+];
+
 class Watch extends Component {
   constructor(props) {
     super();
@@ -24,6 +28,7 @@ class Watch extends Component {
     const minutes = date.getMinutes();
     const hours   = date.getHours();
     const day     = date.getDate();
+    const month     = date.getMonth();
 
     const secAngle = seconds * 6;
     const minAngle = minutes * 6;
@@ -33,7 +38,8 @@ class Watch extends Component {
       secAngle,
       minAngle,
       hourAngle,
-      day
+      day,
+      month
     });
   }
 
@@ -52,7 +58,7 @@ class Watch extends Component {
   }
 
   render() {
-    const { secAngle, minAngle, hourAngle } = this.state;
+    const { secAngle, minAngle, hourAngle, day, month } = this.state;
 
     return (
       <div className='watch'>
@@ -80,7 +86,7 @@ class Watch extends Component {
           {this.renderDialLines()}
         </span>
 
-        <div className="date"></div>
+        <div className="date">{day} {monthNames[month]}</div>
       </div>
     );
   }
