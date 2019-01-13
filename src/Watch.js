@@ -32,7 +32,7 @@ class Watch extends Component {
 
     const secAngle = seconds * 6;
     const minAngle = minutes * 6;
-    const hourAngle = hours * 30;
+    const hourAngle = hours * 30 + minutes * (360 / 720);
 
     this.setState({
       secAngle,
