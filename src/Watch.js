@@ -15,7 +15,7 @@ class Watch extends Component {
   }
 
   componentDidMount() {
-    // setInterval(this.tick(), 100);
+    setInterval(this.tick, 100);
   }
 
   tick() {
@@ -26,12 +26,8 @@ class Watch extends Component {
     const day     = date.getDate();
 
     const secAngle = seconds * 6;
-    const minAngle = minutes * 6 + (seconds * (360 / 3600));
-    console.log({ minAngle});
-    const hourAngle = hours * 30 + minutes * (360 / 720);
-    console.log({seconds});
-    console.log({minutes});
-    console.log({hours});
+    const minAngle = minutes * 6;
+    const hourAngle = hours * 30;
 
     this.setState({
       secAngle,
@@ -48,6 +44,7 @@ class Watch extends Component {
         <span
           className='diallines'
           style={{ color: 'red', transform: `rotate(${rotationDegrees}deg)` }}
+          key={`dialLine-${i}`}
 
         />
       );
